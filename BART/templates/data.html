@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BART Commute</title>
+  <!-- Insert Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Insert CSS Stylesheet -->
+  <!-- <link rel="stylesheet" href="style_css_html.css" media="screen"> -->
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>BART Commuting Dashboard</h1>
+        <p>Use the dropdown menu to explore the dataset</p>
+       <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/graphs">Graphs</a>
+        <a href="/map">Heatmap</a>
+        <a class="active" href="/about">About the Data</a>
+      </div>
+      </div>
+      
+    </div>
+    <div class="container">
+      <section class="row">
+        <div class="col-md-12">
+          <article class="description-content">
+            <h3 class="description-header">BART Data Analytics: Passenger Concentration vs. Time of Day/Station</h3>
+            <hr class="description-hr"/>
+            <img src="../static/images/bart-logo.png" alt="" id="bart-image"/>
+            <p>The below data table is the raw data set used to form the foundation of our BART commmute patterns analysis.</p>
+              <p>The data was manipulated through Python and transposed into a MongoDB database. The visualizations were created through a variety of tools, including D3 and Leaflet.</p>
+          </article>
+        </div>
+  </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>SELECT STATION:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <!-- <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sample MetaData</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div> -->
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="map-id"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="pie"></div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div id="table-area">
+        <table id="bart-table" class="table table-striped">
+          <thead>
+            <tr>
+              <th class="table-head">Station</th>
+              <th class="table-head">Destination</th>
+              <th class="table-head">Origin</th>                
+              <th class="table-head">Time Date</th>
+              <th class="table-head">Day</th>
+              <th class="table-head">Hour</th>
+              <th class="table-head">Total</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+
+</body>
+
+</html>
