@@ -8,6 +8,7 @@
   <title>BART Commute</title>
   <!-- Insert Bootstrap Stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <!-- Insert CSS Stylesheet -->
   <!-- <link rel="stylesheet" href="style_css_html.css" media="screen"> -->
   <link rel="stylesheet" href="../static/css/styles.css">
@@ -29,7 +30,7 @@
       </div>
       
     </div>
-    <div class="container">
+    <!-- <div class="container"> -->
       <section class="row">
         <div class="col-md-12">
           <article class="description-content">
@@ -40,7 +41,7 @@
             <p>Based on the data visualizations, we can conclude that commuting hours (8am-10am and 5-6pm) tend to the most "busy" times (i.e. largest in/out migration per station) on BART. With respect to stations, stations located in the Financia District, which is arguably the center of in/out migration activity in the city are the busiest station based on in/out migration patterns of BART passengers.</p>
           </article>
         </div>
-  </div>
+  <!-- </div> -->
     <div class="row">
       <div class="col-md-2">
         <div class="well">
@@ -55,24 +56,32 @@
         </div> -->
       </div>
       <div class="col-md-5">
-        <div id="bar"></div>
+        <div id="pie"></div>
       </div>
       <div class="col-md-5">
-        <div id="map-id"></div>
+        <div id="pie2"></div>
       </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="area"><!-- Plotly chart will be drawn inside this DIV --></div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div id="pie"></div>
+      <div id="chart"><!-- Plotly chart will be drawn inside this DIV --></div>
     </div>
   </div>
+</div>
 
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+  <!-- <script src="../static/js/appChart.js"></script> -->
+  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 </body>
 
