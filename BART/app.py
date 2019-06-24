@@ -202,10 +202,13 @@ def barchart():
 
     # Filter the data based on the sample number and
     # only keep rows with values above 1
-    sample_bardata = df.loc[df['Total'] > 0, ["Station", "Day", "Hour", "Total"]]
+    sample_bardata = df.loc[df['Total'] > 0, ["Station", "DateTime", "Origin", "Destination", "Day", "Hour", "Total"]]
     # Format the data to send as json
     bardata = {
         "station": sample_bardata.Station.values.tolist(),
+        "datetime": sample_bardata.DateTime.values.tolist(),
+        "origin": sample_bardata.Origin.values.tolist(),
+        "destination": sample_bardata.Destination.values.tolist(),
         "day": sample_bardata.Day.values.tolist(),
         "hour": sample_bardata.Hour.tolist(),
         "sample_values": sample_bardata.Total.tolist(),

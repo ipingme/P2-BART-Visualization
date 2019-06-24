@@ -64,25 +64,60 @@
                 <h3 class="description-header">BART Data Analytics: Passenger Concentration vs. Time of Day/Station</h3>
                 <hr class="description-hr"/>
                 <img src="../static/images/bart-logo.png" alt="" id="bart-image"/>
-                <p>The below graphs provide information on passenger concentration for a random two-week period in 2016 based on station and time of day.</p>
-                <p>Based on the data visualizations, we can conclude that commuting hours (8am-10am and 5-6pm) tend to the most "busy" times (i.e. largest in/out migration per station) on BART. With respect to stations, stations located in the Financia District, which is arguably the center of in/out migration activity in the city are the busiest station based on in/out migration patterns of BART passengers.</p>
-              </article>
-            </div>
+                  <div class="container">
+                    <section class="row">
+                      <div class="col-md-12">
+                          <article class="purpose-header">
+                              <h4>Purpose:</h4>
+                                <p>The purpose of this study was to break down BART commute pattens and to represent these patterns informative visuals.</p>
+                            </article>
+                      </div>
+                    </section>                                     
+                  </div>
+                  <div class="container">
+                    <section class="row">
+                      <div class="col-md-12">
+                        <article class = "research-header">
+                            <h4>Research questions:</h4>
+                              <p>This study is intended to provide some insights based on the below guiding questions.</p>
+                              <li>What is the "busiest" BART station?</li>
+                              <li>What time of day is the "busiest" time to commute on BART?</li>
+                              <li>When is the best time to commute into San Francisco?</li>
+                        </article>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="container">
+                      <section class="row">
+                        <div class="col-md-12">
+                          <article class = "conclusion-header">
+                              <h4>Conclusions:</h4>
+                                <p>The below graphs provide information on passenger concentration for a random two-week period in 2016 based on station and time of day.</p>
+                                <p>Based on the data visualizations, we can conclude that commuting hours (8am-10am and 5-6pm) tend to the most "busy" times (i.e. largest in/out migration per station) on BART. With respect to stations, stations located in the Financia District, which is arguably the center of in/out migration activity in the city are the busiest station based on in/out migration patterns of BART passengers.</p>
+                          </article>
+                        </div>
+                      </section>
+                    </div>                                    
+                    
+                 
+                </article>
+            </div>                                                    
+        </div>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-2">
         <div class="well">
           <h5>SELECT STATION:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <!-- <div class="panel panel-primary">
+        <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Sample MetaData</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div> -->
-      </div>
+      <!-- </div>
       <div class="col-md-5">
         <div id="bar"></div>
       </div>
@@ -94,13 +129,13 @@
   <div class="row">
     <div class="col-md-12">
       <div id="pie"></div>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
+  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 </body>

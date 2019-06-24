@@ -28,10 +28,8 @@
         <a href="/about">About the Data</a>
       </div>
       </div>
-      
     </div>
-    <!-- <div class="container"> -->
-      <section class="row">
+      <div class="row">
         <div class="col-md-12">
           <article class="description-content">
             <h3 class="description-header">BART Data Analytics: Passenger Concentration vs. Time of Day/Station</h3>
@@ -41,19 +39,38 @@
             <p>Based on the data visualizations, we can conclude that commuting hours (8am-10am and 5-6pm) tend to the most "busy" times (i.e. largest in/out migration per station) on BART. With respect to stations, stations located in the Financia District, which is arguably the center of in/out migration activity in the city are the busiest station based on in/out migration patterns of BART passengers.</p>
           </article>
         </div>
-  <!-- </div> -->
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>First question: Which BART station is the busiest?</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="chart"><!-- Plotly bar chart --></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Second question: What time is the busiest time of day to get on BART?</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="area"><!-- Plotly area chart --></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Third question: What day of the week is the busiest day to get on BART?</h3>
+        </div>
+      </div>
     <div class="row">
       <div class="col-md-2">
         <div class="well">
           <h5>SELECT STATION:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <!-- <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Sample MetaData</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div> -->
       </div>
       <div class="col-md-5">
         <div id="pie"></div>
@@ -62,18 +79,8 @@
         <div id="pie2"></div>
       </div>
     </div>
-  </div>
-  <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div id="area"><!-- Plotly chart will be drawn inside this DIV --></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div id="chart"><!-- Plotly chart will be drawn inside this DIV --></div>
-    </div>
-  </div>
+  
+  
 </div>
 
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
