@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Layers</title>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Leaflet CSS & JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -16,10 +16,7 @@
   <link rel="stylesheet" href="../static/css/styles.css">
   <style>
   /* remove default margin and padding from body */
-body {
-  padding: 0;
-  margin: 0;
-}
+
 
 /* set map, body, and html to 100% of the screen size */
 #map,
@@ -28,11 +25,40 @@ html {
   height: 100%;
 }
 </style>
+<link rel="stylesheet" href="../static/css/styles.css">
 </head>
 
 <body>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h1>BART Commuting Dashboard</h1>
+           <div class="topnav">
+            <a href="/">Home</a>
+            <a href="/graphs">Graphs</a>
+            <a class="active" href="/map">Heatmap</a>
+            <a href="/about">About the Data</a>
+          </div>
+          </div>
+          
+        </div>
+        <div class="container">
+          <div class="row">
+              <article class="description-content">
+                <h3 class="description-header">BART Heatmap: Passenger Concentration</h3>
+                <hr class="description-hr"/>
+                <img src="../static/images/bart-logo.png" alt="" id="bart-image"/>
+                <p>The below heat map visualizes passenger concentration based on a random two-week period in 2016.</p>
+                <p>The heat map shows that stations located in San Francisco's Financial District are generally more concentrated than other stations in the BART network.</p>
+              </article>
+            </div>
+      </div>
+    </div>
   <!-- The div where we will inject our map -->
+  <!-- <div class="container"> -->
   <div id="map"></div>
+<!-- </div> -->
 
   <!-- API key -->
   <script type="text/javascript" src="../static/js/config.js"></script>
